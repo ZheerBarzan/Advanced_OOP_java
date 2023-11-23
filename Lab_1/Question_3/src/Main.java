@@ -17,7 +17,7 @@ public class Main {
         String capString = "hello everyone";
         System.out.println(capString.toUpperCase());
         // E) extract the first 3 letter of a string and put it in a variable
-        String string1 = "hello";
+        String string1 = "expelarmuis";
         String string2 = string1.substring(0,3);
         System.out.println("the original: "+string1+" text replaced: "+string2);
 
