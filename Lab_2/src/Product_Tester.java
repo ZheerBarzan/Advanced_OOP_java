@@ -1,6 +1,13 @@
 
 public class Product_Tester {
     public static void main(String[] args) {
+        Product p1 = new Product(1,"Iphone",1000,2023,100);
+        Product p2 = new Product(2,"Galaxy",1000,2023,100);
 
+        // change the price of p1 to 123 "use setprice"
+
+        // implement the folowing A) sell 10 items from p1
+        //B) compute selling price for p2
+        //C)print objects p1 and p2
     }
 }
