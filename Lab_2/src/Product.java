@@ -15,6 +15,13 @@ public class Product {
         this.product_count = count;
     }
     // make another constructor with 3 values(id,name,price) year by defualt is 2023 and count by defualt is 100
+    public Product(int id,String name,double price){
+        this.product_id = id;
+        this.product_name = name;
+        this.product_price = price;
+        this.product_year = 2023;
+        this.product_count = 100;
+    }
 
     public int getProduct_id() {
         return product_id;
