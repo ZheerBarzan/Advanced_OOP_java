@@ -1,6 +1,6 @@
 public class Product {
 
-    private final int DISCOUNT_RATE = 5;
+    private  final int DISCOUNT_RATE = 5;
     private int product_id;
     private String product_name;
     private double product_price;
@@ -14,7 +14,7 @@ public class Product {
         this.product_year = year;
         this.product_count = count;
     }
-    // make another constructor with 3 values(id,name,price) year by defualt is 2023 and count by defualt is 100
+
     public Product(int id,String name,double price){
         this.product_id = id;
         this.product_name = name;
@@ -63,23 +63,23 @@ public class Product {
         this.product_count = product_count;
     }
 
-    //format string with product id,product name and product selling price
+
     @Override
     public String toString() {
-        return super.toString();
+        return "";
     }
-    //after applying the discount it computes the selling price
     public double computeSellingPrice(){
-        return 0;
+        double computedDiscount = getProduct_price()*(computeDiscount());
+        double sellingPrice = getProduct_price()-computedDiscount;
+        return sellingPrice;
     }
     //it deducts a number from the product count
     public int soldNumber(int sold){
 
         return sold;
     }
-    // it computes the discount value using the discount_rate
     private double computeDiscount(){
-
-        return 0;
+        double discountValue = (double) DISCOUNT_RATE/100;
+        return discountValue;
     }
 }
