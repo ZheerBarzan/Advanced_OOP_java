@@ -8,6 +8,8 @@ public class Product_Tester {
         System.out.println(p2.getProduct_year() +" " +p2.getProduct_count());
 
         System.out.println(p2.toString());
+        p2.soldNumber(1);
+        System.out.println(p2.getProduct_count());
 
         // implement the folowing A) sell 10 items from p1
         //B) compute selling price for p2

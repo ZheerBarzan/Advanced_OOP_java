@@ -59,25 +59,25 @@ public class Product {
         return product_count;
     }
 
-    public void setProduct_count(int product_count) {
+    public int setProduct_count(int product_count) {
         this.product_count = product_count;
+        return product_count;
     }
-
 
     @Override
     public String toString() {
         return "the product ID is: "+ getProduct_id()+"\n"+"the product name is: "+getProduct_name()+"\n"
-                +"the price of the product is: "+computeSellingPrice()+" "+computeDiscount();;
+                +"the price of the product is: "+computeSellingPrice()+" "+computeDiscount();
     }
     public double computeSellingPrice(){
         double computedDiscount = getProduct_price()*(computeDiscount());
         double sellingPrice = getProduct_price()-computedDiscount;
         return sellingPrice;
     }
-    //it deducts a number from the product count
-    public int soldNumber(int sold){
 
-        return sold;
+    public int soldNumber(int sold){
+        int soldItemCount = setProduct_count( getProduct_count() - sold);
+        return soldItemCount;
     }
     private double computeDiscount(){
         double discountValue = (double) DISCOUNT_RATE/100;
