@@ -67,7 +67,7 @@ public class Product {
     @Override
     public String toString() {
         return "the product ID is: "+ getProduct_id()+"\n"+"the product name is: "+getProduct_name()+"\n"
-                +"the price of the product is: "+computeSellingPrice()+" "+computeDiscount();
+                +"the price of the product is: "+computeSellingPrice();
     }
     public double computeSellingPrice(){
         double computedDiscount = getProduct_price()*(computeDiscount());
