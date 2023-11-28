@@ -52,4 +52,15 @@ public class Course {
     public void setMark(double mark) {
         this.mark = mark;
     }
+
+    @Override
+    public String toString() {
+        return "Course{" +
+                "title='" + title + '\'' +
+                ", day='" + day + '\'' +
+                ", time='" + time + '\'' +
+                ", venue='" + venue + '\'' +
+                ", mark=" + mark +
+                '}';
+    }
 }
