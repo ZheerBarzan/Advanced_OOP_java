@@ -60,9 +60,9 @@ public class Student {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", module=" + Arrays.toString(module) +
-                ", average=" + average +
-                ", program='" + program + '\'' +
-                '}';
+                ", \naverage=" + calculateAverage(module) +
+                ", \nprogram='" + program + '\''+
+                '}'+"\n";
     }
     private double calculateAverage(Course[] courses){
 
