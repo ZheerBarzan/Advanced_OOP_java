@@ -7,10 +7,10 @@ public class Student {
     private double average;
     private String program;
 
-    public Student(int id, String name, Course[] module, String program) {
+    public Student(int id, String name, String title,String day,String time, String venue,  double mark,String program) {
         this.id = id;
         this.name = name;
-        this.module = module;
+        this.module = new Course[]{new Course(title, day, time, venue, mark)};
         this.program = program;
     }
 
@@ -65,6 +65,7 @@ public class Student {
                 '}';
     }
     private double calculateAverage(){
+
         return 0;
     }
 }
