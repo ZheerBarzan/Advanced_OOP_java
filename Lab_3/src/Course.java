@@ -55,7 +55,7 @@ public class Course {
 
     @Override
     public String toString() {
-        return "Course{" +
+        return "\nCourse{" +
                 "title='" + title + '\'' +
                 ", day='" + day + '\'' +
                 ", time='" + time + '\'' +
