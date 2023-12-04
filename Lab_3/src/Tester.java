@@ -8,7 +8,7 @@ public class Tester {
                                         new Course("Software Requirements","WED","4:30","F11",97)};
         ArrayList<Student> students = new ArrayList<>();
 
-        students.add(new Student(1,"zhir",Courses,"PG"));
+        students.add(new Student(1,"zhir barzan",Courses,"PG"));
 
         System.out.println(students.get(0).toString());
     }

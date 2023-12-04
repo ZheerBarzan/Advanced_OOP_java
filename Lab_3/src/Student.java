@@ -64,8 +64,17 @@ public class Student {
                 ", program='" + program + '\'' +
                 '}';
     }
-    private double calculateAverage(){
+    private double calculateAverage(Course[] courses){
 
-        return 0;
+        if (courses == null || courses.length == 0){
+            return 0.0;
+        }
+        double sumOfMarks = 0;
+
+        for (Course course: courses) {
+            sumOfMarks = sumOfMarks + course.getMark();
+        }
+        return sumOfMarks/ courses.length;
+
     }
 }
