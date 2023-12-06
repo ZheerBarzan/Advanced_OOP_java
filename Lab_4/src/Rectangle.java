@@ -35,12 +35,14 @@ public class Rectangle extends Shape {
 
     @Override
     public double getArea() {
-        return super.getArea();
+        double area = getWidth()*getLength();
+        return area;
     }
 
     @Override
     public double getPerimeter() {
-        return super.getPerimeter();
+    double perimeter = 2*(getLength()+getWidth());
+    return perimeter;
     }
 
     @Override

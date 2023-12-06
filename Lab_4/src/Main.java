@@ -9,7 +9,7 @@ public class Main {
         System.out.println(circle.toString());
         System.out.println(rectangle.toString());
         System.out.println(square.toString());
-        System.out.println(Shape.count);
+        System.out.println("number of objects made: "+ Shape.count);
 
     }
 }
