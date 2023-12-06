@@ -33,6 +33,18 @@ public class Square extends Rectangle {
     }
 
     @Override
+    public double getArea() {
+        double area = Math.pow(getSide(),2);
+        return area;
+    }
+
+    @Override
+    public double getPerimeter() {
+        double perimeter = 4* getSide();
+        return perimeter;
+    }
+
+    @Override
     public String toString() {
         return "Square{" +
                 "side=" + side +
