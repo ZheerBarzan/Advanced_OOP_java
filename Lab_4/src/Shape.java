@@ -3,12 +3,16 @@ public abstract class Shape {
     protected String color;
     protected boolean filled;
 
+    protected static int count;
+
     public Shape() {
+        count++;
     }
 
     public Shape(String color, boolean filled) {
         this.color = color;
         this.filled = filled;
+        count++;
     }
 
     public String getColor() {
