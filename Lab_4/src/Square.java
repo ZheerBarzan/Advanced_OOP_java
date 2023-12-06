@@ -40,6 +40,6 @@ public class Square extends Rectangle {
                 ", filled=" + filled +
                 ", Area=" + getArea() +
                 ", Perimeter=" + getPerimeter() +
-                '}';
+                "}\n";
     }
 }

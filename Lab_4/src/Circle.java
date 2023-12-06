@@ -26,12 +26,14 @@ public class Circle extends Shape {
 
     @Override
     public double getArea() {
-        return super.getArea();
+        double area = Math.PI * Math.pow(getRadius(),2);
+        return area;
     }
 
     @Override
     public double getPerimeter() {
-        return super.getPerimeter();
+        double perimeter = 2 * Math.PI * getRadius();
+        return perimeter;
     }
 
     @Override
@@ -41,7 +43,7 @@ public class Circle extends Shape {
                 ", color='" + color + '\'' +
                 ", filled=" + filled +
                 ", Area=" + getArea() +
-                ", perimeter=" + getPerimeter() +
-                '}';
+                ", Perimeter=" + getPerimeter() +
+                "}\n";
     }
 }

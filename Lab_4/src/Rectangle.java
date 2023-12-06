@@ -52,6 +52,6 @@ public class Rectangle extends Shape {
                 ", filled=" + filled +
                 ", Area=" + getArea() +
                 ", Perimeter=" + getPerimeter() +
-                '}';
+                "}\n";
     }
 }
