@@ -1,4 +1,5 @@
 public class Property {
+    private static final double DISCOUNT = 10;
     private int id;
     private double area;
     private String city;
@@ -74,6 +75,11 @@ public class Property {
 
     public void setOwner(String owner) {
         this.owner = owner;
+    }
+    public double applyDiscount(){
+        double soldPrice = (getPrice()-(DISCOUNT/100)* getPrice());
+        return soldPrice;
+
     }
 }
 
