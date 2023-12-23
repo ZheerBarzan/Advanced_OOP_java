@@ -6,10 +6,15 @@ public class Main {
     public static void main(String[] args) {
         ArrayList<Property> houses = new ArrayList<Property>();
 
-        try(BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\zheer\\OneDrive\\Desktop\\x.txt"))){
+        try(BufferedReader reader = new BufferedReader(new FileReader("/Users/zheer/Desktop/property.txt"))){
 
             String row;
+            boolean firstRow = true;
             while ((row = reader.readLine()) != null){
+                if(firstRow){
+                    firstRow = false;
+                    continue;
+                }
                 String[] value = row.split(" ");
 
 
