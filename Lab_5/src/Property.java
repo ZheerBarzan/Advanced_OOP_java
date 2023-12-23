@@ -1,4 +1,6 @@
 import java.time.Year;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Property {
     private static final double DISCOUNT = 10;
@@ -92,6 +94,18 @@ public class Property {
         } else {
             return "propertyID: "+getId()+" is not older and not eligible for discount = "+getPrice();
         }
+    }
+    public static List<Property> getPropertyByCity(List<Property> properties, String city){
+
+        List<Property> filterByCity= new ArrayList<Property>();
+
+        for (Property property : properties){
+            if (property.city.equals(city)){
+                filterByCity.add(property);
+            }
+        }
+
+        return filterByCity;
     }
 
     @Override

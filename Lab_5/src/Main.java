@@ -1,6 +1,6 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
+import java.io.*;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -29,10 +29,38 @@ public class Main {
                 // A)-3 adding it to an arraylist
                 houses.add(property);
                 System.out.println(houses.toString());
+
                 // B) applying discount for any property that is older than 10 years
-                System.out.println(property.elgibleForDiscount());
+                System.out.println(property.elgibleForDiscount()+"\n");
+
             }
-        } catch (Exception e) {
+
+        } catch (IOException e) {
+            e.getStackTrace();
+        }
+
+
+        // C) Show list of all properties located in Erbil
+        List<Property> erbilHouses = Property.getPropertyByCity(houses,"Erbil");
+        System.out.println("these properties are from Erbil: \n"+erbilHouses.toString());
+
+        // D) Define a new property, using optional data and add it to the arraylist you have created in part “a” above.
+        Property newProperty = new Property(111,300,"suli",'H',2005,20000,"Zhir");
+        houses.add(newProperty);
+        System.out.println("the new added property\n"+houses.getLast());
+
+        // E) Save the content of the array list, in a new file called “NewProp.txt”.
+        try(PrintWriter printWriter = new PrintWriter(new FileWriter("New_prop.txt"))) {
+            printWriter.println("ID"+" "+"Area"+" "+"City"+" "+"Type"+" "+"Year"+" "+"Price"+" "+"Owner"+" ,"+" eligible for discount");
+            for (Property property : houses){
+                printWriter.println(
+                        property.getId()+" "+property.getArea()+" "+property.getCity()+" "+property.getType()+" "+property.getYear()
+                        +" "+property.getPrice()+" "+property.getOwner()+" ,"+property.elgibleForDiscount()
+                );
+
+            }
+            System.out.println("data has been written to file: "+printWriter);
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
