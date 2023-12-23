@@ -81,5 +81,18 @@ public class Property {
         return soldPrice;
 
     }
+
+    @Override
+    public String toString() {
+        return "Property{" +
+                "id=" + id +
+                ", area=" + area +
+                ", city='" + city + '\'' +
+                ", type=" + type +
+                ", year=" + year +
+                ", price=" + price +
+                ", owner='" + owner + '\'' +
+                '}';
+    }
 }
 
