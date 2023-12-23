@@ -24,15 +24,19 @@ public class Main {
 
                 Property property = new Property(id,area,city,type,year,price,owner);
 
+
+
+
+
                 houses.add(property);
 
                 System.out.println(houses.toString());
+
+                System.out.println(property.elgibleForDiscount());
             }
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-
-
-
     }
+
 }

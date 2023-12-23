@@ -1,3 +1,5 @@
+import java.time.Year;
+
 public class Property {
     private static final double DISCOUNT = 10;
     private int id;
@@ -81,6 +83,14 @@ public class Property {
         return soldPrice;
 
     }
+    public double elgibleForDiscount(){
+        int currentYear = Year.now().getValue();
+        if ((currentYear - getYear()) >= 10){
+            return applyDiscount();
+        } else {
+            return getPrice();
+        }
+    }
 
     @Override
     public String toString() {
@@ -92,7 +102,7 @@ public class Property {
                 ", year=" + year +
                 ", price=" + price +
                 ", owner='" + owner + '\'' +
-                '}';
+                '}'+"\n";
     }
 }
 
