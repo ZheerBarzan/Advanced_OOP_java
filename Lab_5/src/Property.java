@@ -83,12 +83,14 @@ public class Property {
         return soldPrice;
 
     }
-    public double elgibleForDiscount(){
+    public String elgibleForDiscount(){
         int currentYear = Year.now().getValue();
+
         if ((currentYear - getYear()) >= 10){
-            return applyDiscount();
+
+            return "propertyID: "+getId()+" is older than 10 years and eligible for discount = "+ applyDiscount();
         } else {
-            return getPrice();
+            return "propertyID: "+getId()+" is not older and not eligible for discount = "+getPrice();
         }
     }
 
