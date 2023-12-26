@@ -12,6 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/Lab_1/question_1/Question_1.iml" filepath="$PROJECT_DIR$/Lab_1/question_1/Question_1.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lab_1/Question_2/Question_2.iml" filepath="$PROJECT_DIR$/Lab_1/Question_2/Question_2.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lab_1/Question_3/Question_3.iml" filepath="$PROJECT_DIR$/Lab_1/Question_3/Question_3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RMI/RMI.iml" filepath="$PROJECT_DIR$/RMI/RMI.iml" />
     </modules>
   </component>
 </project>
