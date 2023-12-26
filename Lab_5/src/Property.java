@@ -1,4 +1,6 @@
 import java.time.Year;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Property {
     private static final double DISCOUNT = 10;
@@ -83,13 +85,27 @@ public class Property {
         return soldPrice;
 
     }
-    public double elgibleForDiscount(){
+    public String elgibleForDiscount(){
         int currentYear = Year.now().getValue();
+
         if ((currentYear - getYear()) >= 10){
-            return applyDiscount();
+
+            return "propertyID: "+getId()+" is older than 10 years and eligible for discount = "+ applyDiscount();
         } else {
-            return getPrice();
+            return "propertyID: "+getId()+" is not older and not eligible for discount = "+getPrice();
         }
+    }
+    public static List<Property> getPropertyByCity(List<Property> properties, String city){
+
+        List<Property> filterByCity= new ArrayList<Property>();
+
+        for (Property property : properties){
+            if (property.city.equals(city)){
+                filterByCity.add(property);
+            }
+        }
+
+        return filterByCity;
     }
 
     @Override

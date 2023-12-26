@@ -1,0 +1,10 @@
+ID Area City Type Year Price Owner , eligible for discount
+500 125.2 Erbil A 2017 75000 Ali ,propertyID: 500 is not older and not eligible for discount = 75000
+234 255.0 Erbil H 2002 123000 Hasan ,propertyID: 234 is older than 10 years and eligible for discount = 110700.0
+121 142.0 Soly A 2015 65000 Kareem ,propertyID: 121 is not older and not eligible for discount = 65000
+432 175.0 Soran H 2021 56000 Aland ,propertyID: 432 is not older and not eligible for discount = 56000
+231 2000.0 Dohuk F 2011 40000 Muhammad ,propertyID: 231 is older than 10 years and eligible for discount = 36000.0
+455 3500.0 Soly F 2001 50000 Ranj ,propertyID: 455 is older than 10 years and eligible for discount = 45000.0
+333 100.0 Soly A 2020 6000 Amanj ,propertyID: 333 is not older and not eligible for discount = 6000
+765 122.0 Karkuk H 1990 82000 Balen ,propertyID: 765 is older than 10 years and eligible for discount = 73800.0
+111 300.0 suli H 2005 20000 Zhir ,propertyID: 111 is older than 10 years and eligible for discount = 18000.0
