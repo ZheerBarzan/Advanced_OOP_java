@@ -1,2 +1,2 @@
-public class CurrentConditionDisplay {
+public class CurrentConditionDisplay  {
 }

@@ -14,7 +14,7 @@ public void removeData(Observer observer){
 }
 public void notifyObservers(){
     for (Observer observer: views){
-        observer.update();
+        observer.update(tempretrue,humidty);
     }
 }
 
