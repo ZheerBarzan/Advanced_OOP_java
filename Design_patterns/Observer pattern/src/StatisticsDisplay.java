@@ -8,6 +8,7 @@ public class StatisticsDisplay implements Observer{
 
     @Override
     public void update(float temp, float humidity) {
+        System.out.println("Observer_2 { temp: "+data.getTempretrue()+",\n humdity: "+data.getHumidty() );
 
     }
 }
