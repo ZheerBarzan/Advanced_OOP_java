@@ -9,6 +9,6 @@ public class CurrentConditionDisplay  implements Observer{
 
     @Override
     public void update(float temp, float humidity) {
-        System.out.println("Observer_1 { temp: "+data.getTempretrue()+",\n humdity: "+data.getHumidty() );
+        System.out.println("Current condition: { temp: "+data.getTempretrue()+"\u00B0, humdity: "+data.getHumidty() +"%}");
     }
 }

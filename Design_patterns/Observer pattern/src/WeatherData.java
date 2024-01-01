@@ -2,12 +2,12 @@ import java.util.ArrayList;
 
 public class WeatherData {
 
-private ArrayList<Observer> views;
-float tempretrue = 0;
-float humidty =0;
+private ArrayList<Observer> views = new ArrayList<>();
+private float tempretrue = 0;
+private float humidty =0;
 
 public void registerData(Observer observer){
-    views.add(observer);
+    this.views.add(observer);
 }
 public void removeData(Observer observer){
     views.remove(observer);
