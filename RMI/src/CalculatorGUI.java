@@ -29,6 +29,12 @@ public class CalculatorGUI extends JFrame {
         JTextField firstNumField = new JTextField();
         panel.add(firstNumField);
 
+        JLabel secondNumLabel = new JLabel("Enter the second number");
+        panel.add(secondNumLabel);
+
+        JTextField secondNumField = new JTextField();
+        panel.add(secondNumField);
+
 
     }
 
