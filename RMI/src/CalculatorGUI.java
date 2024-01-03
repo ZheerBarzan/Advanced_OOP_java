@@ -23,6 +23,12 @@ public class CalculatorGUI extends JFrame {
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel,BoxLayout.Y_AXIS));
 
+        JLabel firstNumLabel = new JLabel("Enter the first number");
+        panel.add(firstNumLabel);
+
+        JTextField firstNumField = new JTextField();
+        panel.add(firstNumField);
+
 
     }
 
