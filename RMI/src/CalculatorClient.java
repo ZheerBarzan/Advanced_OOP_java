@@ -6,6 +6,7 @@ public class CalculatorClient {
             Calculator stub = (Calculator) Naming.lookup("rmi://localhost/calculator");
 
         }catch (Exception exception){
+            System.out.println("not working"+exception);
 
         }
     }
