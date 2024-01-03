@@ -16,5 +16,17 @@ public class CalculatorGUI extends JFrame {
             System.out.println("not working"+exception);
 
         }
+        setTitle("RMI Calculator APP");
+        setSize(300,300);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        JPanel panel = new JPanel();
+        panel.setLayout(new BoxLayout(panel,BoxLayout.Y_AXIS));
+
+
+    }
+
+    public static void main(String[] args) {
+        new CalculatorGUI();
     }
 }
