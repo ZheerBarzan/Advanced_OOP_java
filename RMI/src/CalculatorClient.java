@@ -3,8 +3,8 @@ public class CalculatorClient {
 
     public static void main(String[] args) {
         try{
-            Calculator stub = (Calculator) Naming.lookup("rmi://localhost/calculator");
-
+            CalculatorInterface stub = (Calculator) Naming.lookup("rmi://localhost:5000/");
+            System.out.println(stub.add(3,4));
         }catch (Exception exception){
             System.out.println("not working"+exception);
 
