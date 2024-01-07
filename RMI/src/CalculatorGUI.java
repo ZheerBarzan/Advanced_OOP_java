@@ -10,8 +10,9 @@ public class CalculatorGUI extends JFrame {
     private Calculator calculator;
 
     public CalculatorGUI(){
+
         try{
-            calculator = (Calculator) Naming.lookup("rmi://localhost/calculator");
+            this.calculator  = (Calculator) Naming.lookup("rmi://localhost/Cal");
         }  catch (Exception exception){
             System.out.println("not working"+exception);
 
@@ -34,7 +35,8 @@ public class CalculatorGUI extends JFrame {
 
         JTextField secondNumField = new JTextField();
         panel.add(secondNumField);
-
+        setContentPane(panel);
+        setVisible(true);
 
     }
 
