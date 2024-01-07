@@ -15,9 +15,9 @@ public class CalculatorServer {
 
     public static void main(String[] args) {
         try {
-            CalculatorInterface stub = new Calculator();
+            CalculatorInterface skeleton = new Calculator();
             java.rmi.registry.LocateRegistry.createRegistry(1099);
-            java.rmi.Naming.rebind("Cal", stub);
+            java.rmi.Naming.rebind("Cal", skeleton);
             System.out.println("Cal ready");
         } catch (RemoteException e) {
             throw new RuntimeException(e);

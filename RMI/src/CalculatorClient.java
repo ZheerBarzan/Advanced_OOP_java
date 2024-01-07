@@ -1,13 +1,21 @@
+import java.net.MalformedURLException;
 import java.rmi.Naming;
+import java.rmi.NotBoundException;
+import java.rmi.RemoteException;
+
 public class CalculatorClient {
 
     public static void main(String[] args) {
         try{
-            CalculatorInterface stub = (Calculator) Naming.lookup("rmi://localhost/Cal");
+            CalculatorInterface stub = (CalculatorInterface) Naming.lookup("rmi://localhost/Cal");
             System.out.println(stub.add(3,4));
-        }catch (Exception exception){
-            System.out.println("not working"+exception);
-
+            System.out.println("call ready");
+        } catch (RemoteException e) {
+            throw new RuntimeException(e);
+        } catch (MalformedURLException e) {
+            throw new RuntimeException(e);
+        } catch (NotBoundException e) {
+            throw new RuntimeException(e);
         }
     }
 
