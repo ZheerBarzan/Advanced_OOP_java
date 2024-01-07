@@ -16,7 +16,9 @@ public class CalculatorServer {
     public static void main(String[] args) {
         try {
             CalculatorInterface stub = new Calculator();
-            Naming.rebind("rmi://localhost:5000/", stub);
+            java.rmi.registry.LocateRegistry.createRegistry(1099);
+            java.rmi.Naming.rebind("Cal", stub);
+            System.out.println("Cal ready");
         } catch (RemoteException e) {
             throw new RuntimeException(e);
         } catch (MalformedURLException e) {
