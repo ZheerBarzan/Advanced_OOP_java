@@ -7,6 +7,7 @@ import java.rmi.RemoteException;
 
 public class CalculatorClient extends JFrame{
  private CalculatorInterface stub;
+ private JTextArea textArea = new JTextArea(5,20);
     public CalculatorClient(){
         try{
             this.stub = (CalculatorInterface) Naming.lookup("rmi://localhost/Cal");
@@ -46,9 +47,17 @@ public class CalculatorClient extends JFrame{
         secondNumField.setBounds(10,100,280,30);
         panel.add(secondNumField);
 
+        JLabel op = new JLabel("choose and operation");
+        op.setBounds(13,140,280,30);
+        panel.add(op);
+
+        textArea.setBounds(10,210,280,50);
+        panel.add(textArea);
+
+
         // making the add button for addition
         JButton addButton = new JButton("+");
-        addButton.setBounds(25,150,20,20);
+        addButton.setBounds(25,180,20,20);
         addButton.addActionListener(e -> {
                     int x = Integer.parseInt(firstNumField.getText());
                     int y = Integer.parseInt(secondNumField.getText());
