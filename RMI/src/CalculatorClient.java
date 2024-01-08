@@ -6,9 +6,10 @@ import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 
 public class CalculatorClient extends JFrame{
+ private CalculatorInterface stub;
     public CalculatorClient(){
         try{
-            CalculatorInterface stub = (CalculatorInterface) Naming.lookup("rmi://localhost/Cal");
+            this.stub = (CalculatorInterface) Naming.lookup("rmi://localhost/Cal");
             System.out.println("the addition: "+stub.add(3,4));
             System.out.println("the subtraction: "+stub.sub(5,6));
             System.out.println("the multiplication: "+stub.mul(6,2));
@@ -21,10 +22,6 @@ public class CalculatorClient extends JFrame{
         } catch (NotBoundException e) {
             throw new RuntimeException(e);
         }
-
-
-
-
 
         setTitle("RMI Calculator APP");
         setSize(300,300);
@@ -48,6 +45,23 @@ public class CalculatorClient extends JFrame{
         JTextField secondNumField = new JTextField();
         secondNumField.setBounds(10,100,280,30);
         panel.add(secondNumField);
+
+        // making the add button for addition
+        JButton addButton = new JButton("+");
+        addButton.setBounds(25,150,20,20);
+        addButton.addActionListener(e -> {
+                    int x = Integer.parseInt(firstNumField.getText());
+                    int y = Integer.parseInt(secondNumField.getText());
+                    try {
+                        int result = stub.add(x,y);
+                        JOptionPane.showMessageDialog(null, "the result of the Calculation:\n"+x + " + " + y + " = " + result);
+
+                    } catch (RemoteException ex) {
+                        throw new RuntimeException(ex);
+                    }
+                }
+        );
+        panel.add(addButton);
 
 
 
