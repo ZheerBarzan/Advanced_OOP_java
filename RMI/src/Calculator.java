@@ -25,4 +25,6 @@ public class Calculator extends UnicastRemoteObject implements CalculatorInterfa
     public int div(int x, int y) throws RemoteException {
         return x/y;
     }
+
+
 }

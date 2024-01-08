@@ -63,14 +63,68 @@ public class CalculatorClient extends JFrame{
                     int y = Integer.parseInt(secondNumField.getText());
                     try {
                         int result = stub.add(x,y);
-                        JOptionPane.showMessageDialog(null, "the result of the Calculation:\n"+x + " + " + y + " = " + result);
-
+                        textArea.append("result: "+String.valueOf(result));
+                        JOptionPane.showMessageDialog(null, "the result of the Addition:\n"+x + " + " + y + " = " + result);
                     } catch (RemoteException ex) {
                         throw new RuntimeException(ex);
                     }
                 }
         );
         panel.add(addButton);
+
+        //making the subtract button
+        JButton subButton = new JButton("-");
+        subButton.setBounds(50,180,20,20);
+        subButton.addActionListener(e -> {
+                    int x = Integer.parseInt(firstNumField.getText());
+                    int y = Integer.parseInt(secondNumField.getText());
+                    try {
+                        int result = stub.sub(x,y);
+                        textArea.append("result: "+String.valueOf(result));
+                        JOptionPane.showMessageDialog(null, "the result of the subtraction:\n"+x + " - " + y + " = " + result);
+                    } catch (RemoteException ex) {
+                        throw new RuntimeException(ex);
+                    }
+                }
+        );
+        panel.add(subButton);
+
+        //making the multiplication button
+        JButton mulButton = new JButton("*");
+        mulButton.setBounds(75,180,20,20);
+        mulButton.addActionListener(e -> {
+                    int x = Integer.parseInt(firstNumField.getText());
+                    int y = Integer.parseInt(secondNumField.getText());
+                    try {
+                        int result = stub.mul(x,y);
+                        textArea.append("result: "+String.valueOf(result));
+                        JOptionPane.showMessageDialog(null, "the result of the multiplication:\n"+x + " * " + y + " = " + result);
+                    } catch (RemoteException ex) {
+                        throw new RuntimeException(ex);
+                    }
+                }
+        );
+        panel.add(mulButton);
+
+        //making the division button
+        JButton divButton = new JButton("/");
+        divButton.setBounds(100,180,20,20);
+        divButton.addActionListener(e -> {
+                    int x = Integer.parseInt(firstNumField.getText());
+                    int y = Integer.parseInt(secondNumField.getText());
+                    try {
+                        int result = stub.div(x,y);
+                        textArea.append("result: "+String.valueOf(result));
+                        JOptionPane.showMessageDialog(null, "the result of the subtraction:\n"+x + " / " + y + " = " + result);
+                    } catch (RemoteException ex) {
+                        throw new RuntimeException(ex);
+                    }
+                }
+        );
+        panel.add(divButton);
+
+
+
 
 
 
