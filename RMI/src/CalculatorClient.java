@@ -11,11 +11,7 @@ public class CalculatorClient extends JFrame{
     public CalculatorClient(){
         try{
             this.stub = (CalculatorInterface) Naming.lookup("rmi://localhost/Cal");
-            System.out.println("the addition: "+stub.add(3,4));
-            System.out.println("the subtraction: "+stub.sub(5,6));
-            System.out.println("the multiplication: "+stub.mul(6,2));
-            System.out.println("the devision: "+stub.div(6,2));
-            System.out.println("call ready");
+            System.out.println("stub ready");
         } catch (RemoteException e) {
             throw new RuntimeException(e);
         } catch (MalformedURLException e) {
@@ -53,7 +49,6 @@ public class CalculatorClient extends JFrame{
 
         textArea.setBounds(10,210,280,50);
         panel.add(textArea);
-
 
         // making the add button for addition
         JButton addButton = new JButton("+");
@@ -115,30 +110,21 @@ public class CalculatorClient extends JFrame{
                     try {
                         int result = stub.div(x,y);
                         textArea.append("result: "+String.valueOf(result));
-                        JOptionPane.showMessageDialog(null, "the result of the subtraction:\n"+x + " / " + y + " = " + result);
+                        JOptionPane.showMessageDialog(null, "the result of the division:\n"+x + " / " + y + " = " + result);
                     } catch (RemoteException ex) {
                         throw new RuntimeException(ex);
                     }
                 }
         );
         panel.add(divButton);
-
-
-
-
-
-
-
-        
+        // making the GUI
         setContentPane(panel);
         setLayout(null);
         setVisible(true);
-
     }
-
     public static void main(String[] args) {
+        // this is the Client class this needs to be run after the server is working
+        // then you can perform calculations on the GUI of the application.
         new CalculatorClient();
-
     }
-
 }
