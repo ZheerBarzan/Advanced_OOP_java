@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.net.MalformedURLException;
 import java.rmi.Naming;
 import java.rmi.NotBoundException;
@@ -30,20 +31,30 @@ public class CalculatorClient extends JFrame{
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JPanel panel = new JPanel();
-        panel.setLayout(new BoxLayout(panel,BoxLayout.Y_AXIS));
+        panel.setBackground(Color.CYAN);
 
-        JLabel firstNumLabel = new JLabel("Enter the first number");
+        JLabel firstNumLabel = new JLabel("Enter the first number:");
+        firstNumLabel.setBounds(13,25,280,30);
         panel.add(firstNumLabel);
 
         JTextField firstNumField = new JTextField();
+        firstNumField.setBounds(10,50,280,30);
         panel.add(firstNumField);
 
-        JLabel secondNumLabel = new JLabel("Enter the second number");
+        JLabel secondNumLabel = new JLabel("Enter the second number:");
+        secondNumLabel.setBounds(13,75,280,30);
         panel.add(secondNumLabel);
 
         JTextField secondNumField = new JTextField();
+        secondNumField.setBounds(10,100,280,30);
         panel.add(secondNumField);
+
+
+
+
+        
         setContentPane(panel);
+        setLayout(null);
         setVisible(true);
 
     }
